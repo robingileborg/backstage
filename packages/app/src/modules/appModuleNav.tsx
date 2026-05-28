@@ -33,6 +33,7 @@ import { SidebarSearchModal } from '@backstage/plugin-search';
 import { NotificationsSidebarItem } from '@backstage/plugin-notifications';
 import { UserSettingsSignInAvatar } from '@backstage/plugin-user-settings';
 import { makeStyles } from '@material-ui/core/styles';
+import TrackChangesIcon from '@material-ui/icons/TrackChanges';
 
 const useSidebarLogoStyles = makeStyles({
   root: {
@@ -122,6 +123,11 @@ export const appModuleNav = createFrontendModule({
                 {nav.take('page:scaffolder')}
                 <SidebarDivider />
                 <SidebarScrollWrapper>
+                  <SidebarItem
+                    icon={TrackChangesIcon}
+                    to="/tech-radar"
+                    text="Tech Radar"
+                  />
                   {nav.rest({ sortBy: 'title' })}
                 </SidebarScrollWrapper>
               </SidebarGroup>

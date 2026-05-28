@@ -74,6 +74,7 @@
     "@backstage/plugin-search-react": "workspace:^",
     "@backstage/plugin-signals": "workspace:^",
     "@backstage/plugin-structurizr": "workspace:^",
+    "@backstage/plugin-tech-radar": "^0.7.4",
     "@backstage/plugin-techdocs": "workspace:^",
     "@backstage/plugin-techdocs-module-addons-contrib": "workspace:^",
     "@backstage/plugin-techdocs-react": "workspace:^",

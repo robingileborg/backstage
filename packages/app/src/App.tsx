@@ -46,6 +46,7 @@ import { Route } from 'react-router';
 import { CatalogImportPage } from '@backstage/plugin-catalog-import';
 import kubernetesPlugin from '@backstage/plugin-kubernetes/alpha';
 import structurizrPlugin from '@backstage/plugin-structurizr/alpha';
+import { TechRadarPage } from '@backstage/plugin-tech-radar';
 import { convertLegacyPlugin } from '@backstage/core-compat-api';
 import { convertLegacyPageExtension } from '@backstage/core-compat-api';
 import { convertLegacyEntityContentExtension } from '@backstage/plugin-catalog-react/alpha';
@@ -128,6 +129,10 @@ const notFoundErrorPageModule = createFrontendModule({
 const collectedLegacyPlugins = convertLegacyAppRoot(
   <FlatRoutes>
     <Route path="/catalog-import" element={<CatalogImportPage />} />
+    <Route
+      path="/tech-radar"
+      element={<TechRadarPage width={1500} height={800} />}
+    />
   </FlatRoutes>,
 );
 
