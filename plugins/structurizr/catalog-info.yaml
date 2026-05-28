@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: backstage-plugin-structurizr
+  title: '@backstage/plugin-structurizr'
+  description: >-
+    A Backstage plugin that embeds Structurizr architecture diagrams on entity
+    pages
+spec:
+  lifecycle: experimental
+  type: backstage-frontend-plugin
+  owner: maintainers
