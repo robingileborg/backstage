@@ -1,5 +1,22 @@
 # @backstage/plugin-catalog-backend-module-msgraph
 
+## 0.10.2-next.1
+
+### Patch Changes
+
+- 8930d77: Reverted the server-side `accountEnabled eq true` base filter that was added in v1.51.0, which broke the `userGroupMember` path because the group members endpoint doesn't support `$filter` on that property. Disabled users (`accountEnabled === false`) are now filtered client-side in both the `/users` and group members paths. The mutual exclusivity checks between `userFilter` and `userGroupMemberFilter`/`userGroupMemberSearch` have been restored.
+- Updated dependencies
+  - @backstage/backend-plugin-api@1.9.2-next.1
+
+## 0.10.1-next.0
+
+### Patch Changes
+
+- e0889a3: chore(deps): bump `qs` from 6.15.1 to 6.15.2
+- Updated dependencies
+  - @backstage/plugin-catalog-node@2.2.2-next.0
+  - @backstage/backend-plugin-api@1.9.2-next.0
+
 ## 0.10.0
 
 ### Minor Changes
